@@ -1,0 +1,378 @@
+<div class="flex h-screen overflow-hidden bg-background-light font-display text-text-main min-h-screen">
+    
+    <app-sidebar></app-sidebar>
+
+    <!-- Main Content Wrapper -->
+    <div class="flex-1 flex flex-col min-w-0 overflow-hidden">
+        <!-- Top Navigation -->
+        <header class="flex items-center justify-between border-b border-border bg-surface px-6 py-3 sticky top-0 z-20">
+            <div class="flex items-center gap-4">
+                <div>
+                    <h1 class="text-sm font-bold tracking-tight text-text-main leading-none uppercase">Tax Liability Forensics</h1>
+                    <p class="text-[10px] uppercase tracking-wider text-text-dim font-mono mt-1">Institutional Grade</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="flex items-center gap-2 px-3 py-1.5 bg-gray-100 border border-border rounded-sm">
+                    <div class="size-2 rounded-full bg-success animate-pulse"></div>
+                    <span class="text-xs font-mono font-medium text-text-dim">SYSTEM ONLINE</span>
+                </div>
+                <button class="p-2 text-text-dim hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">notifications</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <main class="flex-1 p-6 grid grid-cols-12 gap-6 max-w-[1600px] mx-auto w-full overflow-y-auto">
+            <!-- Header Section -->
+            <div class="col-span-12 flex justify-between items-end border-b border-border pb-4 mb-2">
+                <div>
+                    <div class="flex items-center gap-2 text-text-dim text-xs font-medium mb-1">
+                        <span>FINANCE</span>
+                        <span class="material-symbols-outlined text-[10px]">chevron_right</span>
+                        <span>LIABILITIES</span>
+                        <span class="material-symbols-outlined text-[10px]">chevron_right</span>
+                        <span class="text-primary font-bold">FORENSIC UNIT</span>
+                    </div>
+                    <h2 class="text-2xl font-bold tracking-tight text-text-main flex items-center gap-3">
+                        TAX LIABILITY FORENSICS
+                        <span class="px-2 py-0.5 bg-gray-100 text-text-dim text-xs font-mono border border-border rounded-sm">Q3 2024</span>
+                    </h2>
+                </div>
+                <div class="flex gap-2">
+                    <button class="flex items-center gap-2 px-3 py-2 bg-white border border-border text-text-main text-xs font-bold uppercase tracking-wider hover:bg-gray-50 transition-colors">
+                        <span class="material-symbols-outlined text-sm">upload_file</span>
+                        Import CSV
+                    </button>
+                    <button class="flex items-center gap-2 px-3 py-2 bg-primary hover:bg-blue-700 text-white border border-blue-800 text-xs font-bold uppercase tracking-wider shadow-sm transition-colors">
+                        <span class="material-symbols-outlined text-sm">download</span>
+                        Export Report
+                    </button>
+                </div>
+            </div>
+
+            <!-- Metric Cards Row -->
+            <!-- Key Metric: Estimated Tax Due -->
+            <div class="col-span-12 md:col-span-4 lg:col-span-3">
+                <div class="h-full bg-surface border border-border p-5 flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full -mr-4 -mt-4"></div>
+                    <div class="flex justify-between items-start mb-4 relative z-10">
+                        <div class="flex flex-col">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-text-dim">Est. Q3 Payment</span>
+                            <span class="text-xs text-danger font-medium flex items-center gap-1 mt-1">
+                                <span class="material-symbols-outlined text-[14px]">warning</span>
+                                Due in 14 Days
+                            </span>
+                        </div>
+                        <div class="size-8 border border-border flex items-center justify-center text-text-dim">
+                            <span class="material-symbols-outlined">account_balance</span>
+                        </div>
+                    </div>
+                    <div class="mb-4 relative z-10">
+                        <div class="text-4xl font-bold tracking-tighter text-text-main tabular-nums font-mono">$12,450.00</div>
+                        <div class="h-1 w-full bg-gray-100 mt-3 overflow-hidden">
+                            <div class="h-full bg-danger w-[75%]"></div>
+                        </div>
+                        <div class="flex justify-between mt-1 text-[10px] text-text-dim font-mono">
+                            <span>ACCRUED</span>
+                            <span>75% OF PROJECTED</span>
+                        </div>
+                    </div>
+                    <button class="w-full py-2 bg-primary hover:bg-blue-700 text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 border border-blue-800 transition-colors relative z-10">
+                        <span class="material-symbols-outlined text-sm">check_circle</span>
+                        Mark Paid
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Metric: Net Taxable Income -->
+            <div class="col-span-12 md:col-span-4 lg:col-span-3">
+                <div class="h-full bg-surface border border-border p-5 flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-text-dim">Net Taxable Income</span>
+                        <span class="text-xs text-success font-medium bg-success/10 px-1.5 py-0.5 border border-success/20">+12.4% vs Q2</span>
+                    </div>
+                    <div class="mt-auto">
+                        <div class="text-3xl font-bold tracking-tight text-text-main tabular-nums mb-1">$110,250.00</div>
+                        <div class="text-xs text-text-dim">After $42,150.00 in deductions</div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mt-4 pt-4 border-t border-gray-100">
+                        <div>
+                            <div class="text-[10px] uppercase text-text-dim">Gross</div>
+                            <div class="text-sm font-bold text-text-main tabular-nums">$152.4k</div>
+                        </div>
+                        <div>
+                            <div class="text-[10px] uppercase text-text-dim">Effective Rate</div>
+                            <div class="text-sm font-bold text-text-main tabular-nums">24.5%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chart: Liability Waterfall -->
+            <div class="col-span-12 lg:col-span-6">
+                <div class="h-full bg-surface border border-border p-5 flex flex-col">
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-text-dim">Liability Waterfall</span>
+                        <div class="flex gap-2">
+                            <div class="flex items-center gap-1.5">
+                                <div class="size-2 bg-primary"></div>
+                                <span class="text-[10px] uppercase text-text-dim">Income</span>
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                <div class="size-2 bg-gray-300"></div>
+                                <span class="text-[10px] uppercase text-text-dim">Deduction</span>
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                <div class="size-2 bg-gray-800"></div>
+                                <span class="text-[10px] uppercase text-text-dim">Net</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Custom CSS Chart Implementation -->
+                    <div class="flex-1 flex items-end justify-between gap-2 md:gap-4 font-mono text-xs pt-4 relative min-h-[160px]">
+                        <!-- Horizontal Grid Lines -->
+                        <div class="absolute inset-0 flex flex-col justify-between pointer-events-none z-0">
+                            <div class="w-full h-px bg-gray-100"></div>
+                            <div class="w-full h-px bg-gray-100"></div>
+                            <div class="w-full h-px bg-gray-100"></div>
+                            <div class="w-full h-px bg-gray-100"></div>
+                            <div class="w-full h-px bg-gray-100"></div>
+                        </div>
+                        <!-- Bar 1: Gross Income -->
+                        <div class="flex flex-col items-center gap-2 z-10 w-full group cursor-pointer">
+                            <div class="text-text-main font-bold opacity-0 group-hover:opacity-100 transition-opacity absolute -top-6 bg-surface px-1 border border-border text-[10px] z-20 shadow-sm">$152.4k</div>
+                            <div class="w-full max-w-[60px] bg-primary h-[140px] relative transition-all group-hover:bg-blue-600"></div>
+                            <div class="text-[10px] uppercase text-text-dim font-sans tracking-wide">Gross</div>
+                        </div>
+                        <!-- Bar 2: Platform Fees (Negative) -->
+                        <div class="flex flex-col items-center gap-2 z-10 w-full group cursor-pointer">
+                            <div class="text-text-main font-bold opacity-0 group-hover:opacity-100 transition-opacity absolute -top-6 bg-surface px-1 border border-border text-[10px] z-20 shadow-sm">-$12.1k</div>
+                            <div class="w-full max-w-[60px] h-[140px] flex flex-col justify-start relative">
+                                <!-- Invisible spacer to push down -->
+                                <div class="h-[10px]"></div>
+                                <div class="w-full bg-gray-300 h-[20px] bg-opacity-50 striped-bg border-t border-b border-white"></div>
+                            </div>
+                            <div class="text-[10px] uppercase text-text-dim font-sans tracking-wide">Fees</div>
+                        </div>
+                        <!-- Bar 3: Expenses (Negative) -->
+                        <div class="flex flex-col items-center gap-2 z-10 w-full group cursor-pointer">
+                            <div class="text-text-main font-bold opacity-0 group-hover:opacity-100 transition-opacity absolute -top-6 bg-surface px-1 border border-border text-[10px] z-20 shadow-sm">-$30.0k</div>
+                            <div class="w-full max-w-[60px] h-[140px] flex flex-col justify-start relative">
+                                <!-- Invisible spacer -->
+                                <div class="h-[30px]"></div>
+                                <div class="w-full bg-gray-300 h-[35px] bg-opacity-50 striped-bg border-t border-b border-white"></div>
+                            </div>
+                            <div class="text-[10px] uppercase text-text-dim font-sans tracking-wide">Exp.</div>
+                        </div>
+                        <!-- Bar 4: Net Taxable -->
+                        <div class="flex flex-col items-center gap-2 z-10 w-full group cursor-pointer">
+                            <div class="text-text-main font-bold opacity-0 group-hover:opacity-100 transition-opacity absolute -top-6 bg-surface px-1 border border-border text-[10px] z-20 shadow-sm">$110.2k</div>
+                            <div class="w-full max-w-[60px] bg-gray-800 h-[105px] relative transition-all group-hover:bg-gray-700"></div>
+                            <div class="text-[10px] uppercase text-text-main font-bold font-sans tracking-wide">Net</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tax Bracket Telemetry -->
+            <div class="col-span-12 bg-gray-100 border border-border p-3 flex items-center justify-between gap-4">
+                <div class="flex items-center gap-3 w-48">
+                    <div class="p-1.5 bg-gray-200 rounded-sm">
+                        <span class="material-symbols-outlined text-sm text-text-dim">query_stats</span>
+                    </div>
+                    <div>
+                        <div class="text-[10px] uppercase font-bold text-text-dim">Current Bracket</div>
+                        <div class="text-xs font-bold text-text-main">24% Federal</div>
+                    </div>
+                </div>
+                <div class="flex-1 relative h-2 bg-gray-200 rounded-full overflow-hidden">
+                    <!-- Bracket zones -->
+                    <div class="absolute inset-0 flex">
+                        <div class="w-[30%] h-full border-r border-white bg-emerald-500/20"></div>
+                        <div class="w-[30%] h-full border-r border-white bg-emerald-500/30"></div>
+                        <div class="w-[20%] h-full border-r border-white bg-amber-500/30"></div>
+                        <div class="w-[20%] h-full bg-red-500/20"></div>
+                    </div>
+                    <!-- Current position marker -->
+                    <div class="absolute top-0 bottom-0 left-[65%] w-0.5 bg-primary z-10 shadow-[0_0_8px_rgba(10,83,199,0.8)]"></div>
+                </div>
+                <div class="w-48 text-right">
+                    <div class="text-[10px] uppercase font-bold text-text-dim">Dist. to Next Bracket</div>
+                    <div class="text-xs font-bold text-text-main tabular-nums">$14,200.00</div>
+                </div>
+            </div>
+            
+            <!-- Ledger Section -->
+            <div class="col-span-12 bg-surface border border-border flex flex-col min-h-[400px]">
+                <!-- Ledger Header -->
+                <div class="p-4 border-b border-border flex flex-wrap gap-4 justify-between items-center bg-gray-50">
+                    <h3 class="text-sm font-bold uppercase tracking-wider text-text-main flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm text-text-dim">receipt_long</span>
+                        Write-off Ledger
+                    </h3>
+                    <div class="flex items-center gap-2">
+                        <div class="flex bg-white border border-border rounded-sm p-0.5">
+                            <button class="px-3 py-1 text-xs font-medium text-white bg-primary shadow-sm rounded-sm">All</button>
+                            <button class="px-3 py-1 text-xs font-medium text-text-dim hover:text-text-main transition-colors">Hardware</button>
+                            <button class="px-3 py-1 text-xs font-medium text-text-dim hover:text-text-main transition-colors">Software</button>
+                            <button class="px-3 py-1 text-xs font-medium text-text-dim hover:text-text-main transition-colors">Travel</button>
+                        </div>
+                        <div class="h-6 w-px bg-gray-300 mx-1"></div>
+                        <button class="text-text-dim hover:text-text-main">
+                            <span class="material-symbols-outlined text-lg">filter_list</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Table -->
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-50 border-b border-border">
+                                <th class="py-2 px-4 text-[10px] font-bold uppercase tracking-wider text-text-dim">Date</th>
+                                <th class="py-2 px-4 text-[10px] font-bold uppercase tracking-wider text-text-dim">Tx Hash</th>
+                                <th class="py-2 px-4 text-[10px] font-bold uppercase tracking-wider text-text-dim">Merchant</th>
+                                <th class="py-2 px-4 text-[10px] font-bold uppercase tracking-wider text-text-dim">Category</th>
+                                <th class="py-2 px-4 text-[10px] font-bold uppercase tracking-wider text-text-dim">Status</th>
+                                <th class="py-2 px-4 text-[10px] font-bold uppercase tracking-wider text-text-dim text-right">Amount</th>
+                                <th class="py-2 px-4 text-[10px] font-bold uppercase tracking-wider text-text-dim text-center">Receipt</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 text-xs">
+                            <!-- Row 1 -->
+                            <tr class="hover:bg-gray-50 group transition-colors">
+                                <td class="py-3 px-4 text-text-dim font-mono">2024-08-14</td>
+                                <td class="py-3 px-4 text-text-dim font-mono text-[10px] tracking-tight">0x8a...4b21</td>
+                                <td class="py-3 px-4 font-medium text-text-main">Apple Store #402</td>
+                                <td class="py-3 px-4">
+                                    <span class="inline-flex items-center px-2 py-0.5 rounded-sm text-[10px] font-medium bg-blue-50 text-blue-700 border border-blue-100">
+                                        HARDWARE
+                                    </span>
+                                </td>
+                                <td class="py-3 px-4">
+                                    <span class="flex items-center gap-1.5 text-success font-medium">
+                                        <span class="material-symbols-outlined text-[14px]">verified</span>
+                                        Verified
+                                    </span>
+                                </td>
+                                <td class="py-3 px-4 text-right font-mono font-medium text-text-main tabular-nums">$3,249.00</td>
+                                <td class="py-3 px-4 text-center">
+                                    <button class="text-text-dim hover:text-primary transition-colors">
+                                        <span class="material-symbols-outlined text-[16px]">description</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <!-- Row 2 -->
+                            <tr class="hover:bg-gray-50 group transition-colors">
+                                <td class="py-3 px-4 text-text-dim font-mono">2024-08-12</td>
+                                <td class="py-3 px-4 text-text-dim font-mono text-[10px] tracking-tight">0x7c...9a12</td>
+                                <td class="py-3 px-4 font-medium text-text-main">AWS Web Services</td>
+                                <td class="py-3 px-4">
+                                    <span class="inline-flex items-center px-2 py-0.5 rounded-sm text-[10px] font-medium bg-purple-50 text-purple-700 border border-purple-100">
+                                        SOFTWARE
+                                    </span>
+                                </td>
+                                <td class="py-3 px-4">
+                                    <span class="flex items-center gap-1.5 text-success font-medium">
+                                        <span class="material-symbols-outlined text-[14px]">verified</span>
+                                        Verified
+                                    </span>
+                                </td>
+                                <td class="py-3 px-4 text-right font-mono font-medium text-text-main tabular-nums">$422.50</td>
+                                <td class="py-3 px-4 text-center">
+                                    <button class="text-text-dim hover:text-primary transition-colors">
+                                        <span class="material-symbols-outlined text-[16px]">description</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <!-- Row 3 -->
+                            <tr class="hover:bg-gray-50 group transition-colors">
+                                <td class="py-3 px-4 text-text-dim font-mono">2024-08-10</td>
+                                <td class="py-3 px-4 text-text-dim font-mono text-[10px] tracking-tight">0x3f...1c88</td>
+                                <td class="py-3 px-4 font-medium text-text-main">Delta Airlines</td>
+                                <td class="py-3 px-4">
+                                    <span class="inline-flex items-center px-2 py-0.5 rounded-sm text-[10px] font-medium bg-amber-50 text-amber-700 border border-amber-100">
+                                        TRAVEL
+                                    </span>
+                                </td>
+                                <td class="py-3 px-4">
+                                    <span class="flex items-center gap-1.5 text-amber-600 font-medium">
+                                        <span class="material-symbols-outlined text-[14px]">pending</span>
+                                        Review
+                                    </span>
+                                </td>
+                                <td class="py-3 px-4 text-right font-mono font-medium text-text-main tabular-nums">$1,205.80</td>
+                                <td class="py-3 px-4 text-center">
+                                    <button class="text-text-dim hover:text-primary transition-colors">
+                                        <span class="material-symbols-outlined text-[16px]">add_a_photo</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <!-- Row 4 -->
+                            <tr class="hover:bg-gray-50 group transition-colors">
+                                <td class="py-3 px-4 text-text-dim font-mono">2024-08-08</td>
+                                <td class="py-3 px-4 text-text-dim font-mono text-[10px] tracking-tight">0x2a...8d44</td>
+                                <td class="py-3 px-4 font-medium text-text-main">WeWork Global</td>
+                                <td class="py-3 px-4">
+                                    <span class="inline-flex items-center px-2 py-0.5 rounded-sm text-[10px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-100">
+                                        OFFICE
+                                    </span>
+                                </td>
+                                <td class="py-3 px-4">
+                                    <span class="flex items-center gap-1.5 text-success font-medium">
+                                        <span class="material-symbols-outlined text-[14px]">verified</span>
+                                        Verified
+                                    </span>
+                                </td>
+                                <td class="py-3 px-4 text-right font-mono font-medium text-text-main tabular-nums">$550.00</td>
+                                <td class="py-3 px-4 text-center">
+                                    <button class="text-text-dim hover:text-primary transition-colors">
+                                        <span class="material-symbols-outlined text-[16px]">description</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <!-- Row 5 -->
+                            <tr class="hover:bg-gray-50 group transition-colors">
+                                <td class="py-3 px-4 text-text-dim font-mono">2024-08-05</td>
+                                <td class="py-3 px-4 text-text-dim font-mono text-[10px] tracking-tight">0x1b...2e99</td>
+                                <td class="py-3 px-4 font-medium text-text-main">Adobe Creative Cloud</td>
+                                <td class="py-3 px-4">
+                                    <span class="inline-flex items-center px-2 py-0.5 rounded-sm text-[10px] font-medium bg-purple-50 text-purple-700 border border-purple-100">
+                                        SOFTWARE
+                                    </span>
+                                </td>
+                                <td class="py-3 px-4">
+                                    <span class="flex items-center gap-1.5 text-success font-medium">
+                                        <span class="material-symbols-outlined text-[14px]">verified</span>
+                                        Verified
+                                    </span>
+                                </td>
+                                <td class="py-3 px-4 text-right font-mono font-medium text-text-main tabular-nums">$59.99</td>
+                                <td class="py-3 px-4 text-center">
+                                    <button class="text-text-dim hover:text-primary transition-colors">
+                                        <span class="material-symbols-outlined text-[16px]">description</span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Table Footer/Pagination -->
+                <div class="mt-auto p-3 border-t border-border flex justify-between items-center bg-gray-50">
+                    <span class="text-[10px] uppercase text-text-dim font-bold tracking-wider">Showing 5 of 142 Records</span>
+                    <div class="flex gap-1">
+                        <button class="size-8 flex items-center justify-center border border-border bg-white text-text-dim hover:border-primary hover:text-primary transition-colors rounded-sm">
+                            <span class="material-symbols-outlined text-sm">chevron_left</span>
+                        </button>
+                        <button class="size-8 flex items-center justify-center border border-border bg-white text-text-dim hover:border-primary hover:text-primary transition-colors rounded-sm">
+                            <span class="material-symbols-outlined text-sm">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>

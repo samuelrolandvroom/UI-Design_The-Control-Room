@@ -1,0 +1,295 @@
+<div class="flex h-screen overflow-hidden bg-background-light text-text-main font-display">
+    
+    <app-sidebar></app-sidebar>
+
+    <!-- Main Content Wrapper -->
+    <div class="flex-1 flex flex-col min-w-0 overflow-hidden">
+        <!-- Top Navigation -->
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border bg-surface px-6 py-3 h-14 shrink-0 z-20 relative shadow-sm">
+            <div class="flex items-center gap-4">
+                <h2 class="text-text-main text-lg font-bold leading-tight tracking-tight uppercase">Agency Foundry</h2>
+                <div class="h-4 w-px bg-border mx-2"></div>
+                <span class="text-text-dim text-xs font-mono uppercase tracking-wider">Module 02 // Structure</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-2 px-3 py-1.5 bg-gray-50 border border-border rounded-sm">
+                    <span class="text-xs font-mono text-text-dim">NET ID: 884-29A</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area: Split View -->
+        <main class="flex flex-1 overflow-hidden">
+            <!-- LEFT PANE: Construction Zone -->
+            <div class="flex-1 flex flex-col min-w-[500px] border-r border-border bg-surface overflow-y-auto custom-scrollbar">
+                <!-- Sticky Header for Left Pane -->
+                <div class="sticky top-0 bg-surface/95 backdrop-blur-sm border-b border-border px-8 py-4 z-10 flex justify-between items-center">
+                    <div>
+                        <h1 class="text-xl font-bold tracking-tight text-text-main">New Entity Configuration</h1>
+                        <p class="text-xs text-text-dim mt-1 uppercase tracking-wide font-medium">Step 1 of 3: Structure & Roster</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <button class="px-3 py-1.5 text-xs font-medium text-text-dim hover:text-text-main hover:bg-gray-100 border border-transparent hover:border-border transition-all">
+                            Reset
+                        </button>
+                        <button class="px-4 py-1.5 bg-primary text-white text-xs font-medium hover:bg-primary-dark transition-colors shadow-sm flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">save</span>
+                            Save Draft
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="p-8 space-y-10 max-w-4xl">
+                    <!-- SECTION 1: Identity -->
+                    <section class="space-y-6">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="material-symbols-outlined text-primary text-lg">verified_user</span>
+                            <h3 class="text-sm font-bold uppercase tracking-wider text-text-main">01. Entity Identity</h3>
+                        </div>
+                        <div class="grid grid-cols-12 gap-6">
+                            <div class="col-span-8 group">
+                                <label class="block text-[11px] font-medium uppercase tracking-wider text-text-dim mb-1 group-focus-within:text-primary transition-colors">Registered Name</label>
+                                <input class="w-full text-base font-medium text-text-main placeholder-gray-400 focus:ring-0 transition-colors" type="text" value="Spectre Collective LLC"/>
+                                <p class="text-[10px] text-text-dim mt-1 pl-2 border-l-2 border-transparent">Official name for legal correspondence.</p>
+                            </div>
+                            <div class="col-span-4 group">
+                                <label class="block text-[11px] font-medium uppercase tracking-wider text-text-dim mb-1 group-focus-within:text-primary transition-colors">Tax Jurisdiction</label>
+                                <select class="w-full text-sm text-text-main focus:ring-0 cursor-pointer transition-colors appearance-none bg-[length:0.7em] bg-[right:0.5rem_center] bg-no-repeat pr-6" style="background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%230056D2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');">
+                                    <option>Delaware, USA</option>
+                                    <option>Wyoming, USA</option>
+                                    <option>Singapore</option>
+                                    <option>Estonia (e-Residency)</option>
+                                </select>
+                            </div>
+                            <div class="col-span-6 group">
+                                <label class="block text-[11px] font-medium uppercase tracking-wider text-text-dim mb-1 group-focus-within:text-primary transition-colors">Tax ID (EIN/VAT)</label>
+                                <input class="w-full text-sm font-mono text-text-main placeholder-gray-400 focus:ring-0 transition-colors" placeholder="XX-XXXXXXX" type="text"/>
+                            </div>
+                            <div class="col-span-6 group">
+                                <label class="block text-[11px] font-medium uppercase tracking-wider text-text-dim mb-1 group-focus-within:text-primary transition-colors">Governing Law</label>
+                                <input class="w-full text-sm text-gray-500 bg-gray-100 border-dashed border-gray-300 cursor-not-allowed focus:border-gray-300" readonly="" type="text" value="State of Delaware"/>
+                            </div>
+                        </div>
+                    </section>
+                    <hr class="border-t border-border/50"/>
+                    
+                    <!-- SECTION 2: Duration -->
+                    <section class="space-y-6">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="material-symbols-outlined text-primary text-lg">schedule</span>
+                            <h3 class="text-sm font-bold uppercase tracking-wider text-text-main">02. Contract Duration</h3>
+                        </div>
+                        <div class="bg-background-light p-4 border border-border">
+                            <div class="flex justify-between items-end mb-4">
+                                <div class="space-y-1">
+                                    <label class="text-[10px] uppercase text-text-dim font-bold">Start Date</label>
+                                    <input class="block w-36 bg-white text-xs border border-border px-2 py-1 focus:border-primary" type="date" value="2023-10-01"/>
+                                </div>
+                                <div class="flex-1 px-4 pb-2">
+                                    <div class="flex justify-between text-[10px] font-mono text-text-dim mb-1">
+                                        <span>Day 0</span>
+                                        <span class="text-primary font-bold">90 Days Active</span>
+                                        <span>Day 90</span>
+                                    </div>
+                                    <!-- Visual Timeline Bar -->
+                                    <div class="h-2 w-full bg-gray-200 relative overflow-hidden">
+                                        <div class="absolute left-0 top-0 h-full bg-primary w-full opacity-20"></div>
+                                        <div class="absolute left-0 top-0 h-full bg-primary w-3/4" style="background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent); background-size: 1rem 1rem;"></div>
+                                    </div>
+                                </div>
+                                <div class="space-y-1 text-right">
+                                    <label class="text-[10px] uppercase text-text-dim font-bold">End Date</label>
+                                    <input class="block w-36 bg-white text-xs border border-border px-2 py-1 focus:border-primary text-right" type="date" value="2024-01-01"/>
+                                </div>
+                            </div>
+                            <p class="text-xs text-text-dim italic">
+                                * Contract auto-terminates unless renewed 7 days prior to end date.
+                            </p>
+                        </div>
+                    </section>
+                    <hr class="border-t border-border/50"/>
+                    
+                    <!-- SECTION 3: Roster -->
+                    <section class="space-y-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-lg">group</span>
+                                <h3 class="text-sm font-bold uppercase tracking-wider text-text-main">03. Membership Grid</h3>
+                            </div>
+                            <span class="text-xs font-mono text-text-dim bg-gray-100 px-2 py-1 rounded-sm">4 / 10 SEATS FILLED</span>
+                        </div>
+                        <div class="border border-border bg-white overflow-hidden">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-gray-50 border-b border-border">
+                                        <th class="py-2 px-4 text-[11px] font-medium uppercase tracking-wider text-text-dim w-1/3">Collaborator</th>
+                                        <th class="py-2 px-4 text-[11px] font-medium uppercase tracking-wider text-text-dim w-1/3">Email Contact</th>
+                                        <th class="py-2 px-4 text-[11px] font-medium uppercase tracking-wider text-text-dim w-1/6">Role</th>
+                                        <th class="py-2 px-4 text-[11px] font-medium uppercase tracking-wider text-text-dim w-1/6 text-right">Access</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-border/50 text-sm">
+                                    <tr class="group hover:bg-blue-50/50 transition-colors">
+                                        <td class="py-3 px-4 font-medium text-text-main">
+                                            <div class="flex items-center gap-2">
+                                                <div class="size-6 bg-gray-200 rounded-full flex items-center justify-center text-[10px] font-bold text-gray-600">JD</div>
+                                                James Doe (You)
+                                            </div>
+                                        </td>
+                                        <td class="py-3 px-4 font-mono text-xs text-text-dim">james@spectre.co</td>
+                                        <td class="py-3 px-4"><span class="bg-blue-100 text-blue-800 text-[10px] px-1.5 py-0.5 font-bold uppercase">Founder</span></td>
+                                        <td class="py-3 px-4 text-right font-mono text-xs text-text-dim">ADMIN</td>
+                                    </tr>
+                                    <tr class="group hover:bg-blue-50/50 transition-colors">
+                                        <td class="py-3 px-4 font-medium text-text-main">
+                                            <div class="flex items-center gap-2">
+                                                <div class="size-6 bg-indigo-100 rounded-full flex items-center justify-center text-[10px] font-bold text-indigo-600">MK</div>
+                                                Maria K.
+                                            </div>
+                                        </td>
+                                        <td class="py-3 px-4 font-mono text-xs text-text-dim">maria@studio.io</td>
+                                        <td class="py-3 px-4"><span class="bg-gray-100 text-gray-700 text-[10px] px-1.5 py-0.5 font-bold uppercase">Dev Lead</span></td>
+                                        <td class="py-3 px-4 text-right font-mono text-xs text-text-dim">WRITE</td>
+                                    </tr>
+                                    <tr class="group hover:bg-blue-50/50 transition-colors">
+                                        <td class="py-3 px-4 font-medium text-text-main">
+                                            <div class="flex items-center gap-2">
+                                                <div class="size-6 bg-emerald-100 rounded-full flex items-center justify-center text-[10px] font-bold text-emerald-600">AL</div>
+                                                Alex L.
+                                            </div>
+                                        </td>
+                                        <td class="py-3 px-4 font-mono text-xs text-text-dim">alex@design.net</td>
+                                        <td class="py-3 px-4"><span class="bg-gray-100 text-gray-700 text-[10px] px-1.5 py-0.5 font-bold uppercase">Designer</span></td>
+                                        <td class="py-3 px-4 text-right font-mono text-xs text-text-dim">READ</td>
+                                    </tr>
+                                    <tr class="group hover:bg-blue-50/50 transition-colors">
+                                        <td class="py-3 px-4 font-medium text-text-main">
+                                            <div class="flex items-center gap-2">
+                                                <div class="size-6 bg-orange-100 rounded-full flex items-center justify-center text-[10px] font-bold text-orange-600">SS</div>
+                                                Sarah Smith
+                                            </div>
+                                        </td>
+                                        <td class="py-3 px-4 font-mono text-xs text-text-dim">sarah@legal.co</td>
+                                        <td class="py-3 px-4"><span class="bg-gray-100 text-gray-700 text-[10px] px-1.5 py-0.5 font-bold uppercase">Counsel</span></td>
+                                        <td class="py-3 px-4 text-right font-mono text-xs text-text-dim">AUDIT</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td class="p-0" colspan="4">
+                                            <button class="w-full text-left py-3 px-4 text-xs font-bold text-primary hover:bg-primary/5 transition-colors flex items-center gap-2 group">
+                                                <span class="group-hover:translate-x-0.5 transition-transform">[+] ADD SEAT</span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </section>
+                    <div class="h-20"></div> <!-- Spacer -->
+                </div>
+            </div>
+            
+            <!-- RIGHT PANE: Verification Zone (Live Preview) -->
+            <div class="w-[45%] bg-background-light border-l border-border flex flex-col relative hidden xl:flex">
+                <!-- Preview Header -->
+                <div class="bg-gray-100 border-b border-border px-6 py-3 flex justify-between items-center shrink-0">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-text-dim text-sm">description</span>
+                        <h2 class="text-xs font-bold uppercase tracking-wider text-text-dim">Live Draft Preview [Read-Only]</h2>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="size-2 rounded-full bg-success animate-pulse"></span>
+                        <span class="text-[10px] font-mono text-success uppercase">Syncing</span>
+                    </div>
+                </div>
+                <!-- Preview Body (Scrollable) -->
+                <div class="flex-1 overflow-y-auto p-8 custom-scrollbar bg-gray-200/50 flex justify-center">
+                    <!-- Paper Effect -->
+                    <div class="w-full max-w-[600px] bg-white min-h-[800px] shadow-sharp border border-gray-200 p-12 text-sm leading-relaxed text-gray-800 font-serif relative">
+                        <!-- Watermark -->
+                        <div class="absolute inset-0 pointer-events-none flex items-center justify-center opacity-[0.03]">
+                            <span class="text-8xl font-bold -rotate-45 uppercase">Draft</span>
+                        </div>
+                        <div class="text-center mb-10">
+                            <h1 class="font-bold text-xl uppercase mb-2">Operating Agreement</h1>
+                            <p class="text-xs font-mono text-gray-500 uppercase">Document Ref: <span class="bg-yellow-100 px-1">HASH-PENDING-INIT</span></p>
+                        </div>
+                        <div class="space-y-6 text-justify">
+                            <p>
+                                This <strong>OPERATING AGREEMENT</strong> (the "Agreement") is entered into as of <span class="bg-blue-50 text-blue-700 px-1 font-mono border-b border-blue-200">October 1, 2023</span> (the "Effective Date"), by and between the members listed in Schedule A (collectively, the "Members").
+                            </p>
+                            <p>
+                                <strong>1. FORMATION.</strong> The Members hereby form a limited liability company named <span class="bg-blue-50 text-blue-700 px-1 font-bold border-b border-blue-200">SPECTRE COLLECTIVE LLC</span> (the "Company") pursuant to the laws of the State of <span class="bg-blue-50 text-blue-700 px-1 border-b border-blue-200">Delaware</span>.
+                            </p>
+                            <p>
+                                <strong>2. TERM.</strong> The term of the Company shall commence on the Effective Date and shall continue until <span class="bg-blue-50 text-blue-700 px-1 font-mono border-b border-blue-200">January 1, 2024</span>, unless sooner terminated as provided in this Agreement.
+                            </p>
+                            <p>
+                                <strong>3. PURPOSE.</strong> The purpose of the Company is to engage in any lawful act or activity for which limited liability companies may be formed under the Act.
+                            </p>
+                            <div>
+                                <p class="mb-2"><strong>SCHEDULE A - MEMBERS</strong></p>
+                                <table class="w-full text-xs border border-gray-300 font-mono">
+                                    <thead class="bg-gray-50">
+                                        <tr>
+                                            <th class="border border-gray-300 p-2 text-left">Name</th>
+                                            <th class="border border-gray-300 p-2 text-left">Role</th>
+                                            <th class="border border-gray-300 p-2 text-right">Initial Contribution</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">James Doe</td>
+                                            <td class="border border-gray-300 p-2">Founder</td>
+                                            <td class="border border-gray-300 p-2 text-right text-gray-400">TBD</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">Maria K.</td>
+                                            <td class="border border-gray-300 p-2">Dev Lead</td>
+                                            <td class="border border-gray-300 p-2 text-right text-gray-400">TBD</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">Alex L.</td>
+                                            <td class="border border-gray-300 p-2">Designer</td>
+                                            <td class="border border-gray-300 p-2 text-right text-gray-400">TBD</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">Sarah Smith</td>
+                                            <td class="border border-gray-300 p-2">Counsel</td>
+                                            <td class="border border-gray-300 p-2 text-right text-gray-400">TBD</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="mt-8 p-4 border border-dashed border-gray-300 bg-gray-50">
+                                <p class="text-[10px] text-gray-500 font-mono text-center uppercase mb-2">Signature Placeholder</p>
+                                <div class="h-12"></div>
+                                <div class="border-t border-gray-300 pt-1 flex justify-between text-[10px] text-gray-500">
+                                    <span>Authorized Representative</span>
+                                    <span>Date</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Floating Action Bar -->
+                <div class="absolute bottom-6 right-6 left-6">
+                    <div class="bg-white border border-border shadow-lg p-3 flex items-center justify-between backdrop-blur-md bg-opacity-95">
+                        <div class="flex items-col flex-col px-2">
+                            <span class="text-[10px] font-bold text-text-dim uppercase">Validation Status</span>
+                            <div class="flex items-center gap-1.5">
+                                <span class="material-symbols-outlined text-success text-sm">check_circle</span>
+                                <span class="text-xs font-medium text-text-main">Ready for Hash</span>
+                            </div>
+                        </div>
+                        <button class="bg-primary hover:bg-primary-dark text-white px-6 py-2 text-sm font-medium shadow-sm transition-colors flex items-center gap-2">
+                            <span>Initialize Agency</span>
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>

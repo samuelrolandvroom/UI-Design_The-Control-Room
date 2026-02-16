@@ -1,0 +1,287 @@
+<div class="flex h-screen overflow-hidden bg-bg-main text-text-main font-display">
+    
+    <app-sidebar></app-sidebar>
+
+    <!-- Main Content Area -->
+    <main class="flex flex-1 overflow-hidden">
+        <!-- Secondary Sidebar: Accounts List -->
+        <aside class="w-64 bg-bg-surface border-r border-border-grid flex flex-col flex-shrink-0">
+            <div class="h-14 border-b border-border-grid flex items-center px-4 justify-between bg-bg-main">
+                <h2 class="text-xs font-bold text-text-dim uppercase tracking-wider">Connected Accounts</h2>
+                <button class="text-primary hover:text-primary-hover">
+                    <span class="material-symbols-outlined text-[20px]">add_circle</span>
+                </button>
+            </div>
+            <div class="flex-1 overflow-y-auto">
+                <div class="flex flex-col">
+                    <!-- Account Item: Active -->
+                    <div class="p-4 border-b border-border-grid bg-blue-50 border-l-4 border-l-primary cursor-pointer">
+                        <div class="flex justify-between items-start mb-1">
+                            <span class="font-semibold text-sm text-text-main">Operations DAO</span>
+                            <span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+                        </div>
+                        <div class="font-mono-nums text-xs text-text-dim mb-2">0x4a...9f21</div>
+                        <div class="font-mono-nums text-sm font-bold text-text-main">$124,500.00</div>
+                    </div>
+                    <!-- Account Item -->
+                    <div class="p-4 border-b border-border-grid hover:bg-gray-50 cursor-pointer group border-l-4 border-l-transparent">
+                        <div class="flex justify-between items-start mb-1">
+                            <span class="font-semibold text-sm text-text-main group-hover:text-primary">Tax Reserve</span>
+                            <span class="material-symbols-outlined text-text-dim text-[16px]">lock_clock</span>
+                        </div>
+                        <div class="font-mono-nums text-xs text-text-dim mb-2">0x8b...3c44</div>
+                        <div class="font-mono-nums text-sm font-bold text-text-main">$42,100.00</div>
+                    </div>
+                    <!-- Account Item -->
+                    <div class="p-4 border-b border-border-grid hover:bg-gray-50 cursor-pointer group border-l-4 border-l-transparent">
+                        <div class="flex justify-between items-start mb-1">
+                            <span class="font-semibold text-sm text-text-main group-hover:text-primary">Project Alpha Escrow</span>
+                            <span class="material-symbols-outlined text-text-dim text-[16px]">handshake</span>
+                        </div>
+                        <div class="font-mono-nums text-xs text-text-dim mb-2">0x2c...1a99</div>
+                        <div class="font-mono-nums text-sm font-bold text-text-main">$15,000.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3 border-t border-border-grid bg-bg-main">
+                <div class="flex items-center gap-2 text-xs text-text-dim">
+                    <span class="w-2 h-2 rounded-full bg-success"></span>
+                    <span>Network: Ethereum Mainnet</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <div class="flex-1 flex flex-col h-full bg-bg-main min-w-0">
+            <!-- Header / Escrow Monitor -->
+            <header class="bg-bg-surface border-b border-border-grid px-6 py-5 flex items-center justify-between shadow-sm z-10">
+                <div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <h1 class="text-xl font-bold text-text-main tracking-tight">Operations DAO</h1>
+                        <span class="px-1.5 py-0.5 bg-blue-100 text-primary text-[10px] font-bold uppercase tracking-wide border border-blue-200">Multi-Sig 2/3</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-text-dim font-mono">
+                        <span>Vault ID:</span>
+                        <span class="text-text-main cursor-pointer hover:underline flex items-center gap-1">
+                            0x4a72...9f21 
+                            <span class="material-symbols-outlined text-[12px]">content_copy</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="flex gap-8">
+                    <div class="flex flex-col items-end">
+                        <span class="text-xs font-bold text-text-dim uppercase tracking-wider mb-1">Total Liquidity</span>
+                        <span class="text-2xl font-bold text-text-main font-mono-nums tracking-tight">$124,500.00</span>
+                    </div>
+                    <div class="h-10 w-px bg-border-grid"></div>
+                    <div class="flex flex-col items-end">
+                        <span class="text-xs font-bold text-text-dim uppercase tracking-wider mb-1 flex items-center gap-1">
+                            <span class="size-2 bg-warning rounded-full"></span> Escrow Locked
+                        </span>
+                        <span class="text-2xl font-bold text-text-main font-mono-nums tracking-tight">$24,500.00</span>
+                    </div>
+                    <div class="h-10 w-px bg-border-grid"></div>
+                    <div class="flex flex-col items-end">
+                        <span class="text-xs font-bold text-text-dim uppercase tracking-wider mb-1 flex items-center gap-1">
+                            <span class="size-2 bg-success rounded-full"></span> Available
+                        </span>
+                        <span class="text-2xl font-bold text-success font-mono-nums tracking-tight">$100,000.00</span>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Scrollable Content -->
+            <div class="flex-1 overflow-y-auto p-6 flex flex-col gap-6">
+                <!-- Approval Queue (The Hot List) -->
+                <section class="flex flex-col gap-3">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-sm font-bold text-text-dim uppercase tracking-widest flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[18px]">verified_user</span>
+                            Approval Queue (2 Pending)
+                        </h2>
+                    </div>
+                    <div class="bg-bg-surface border border-border-grid shadow-sm">
+                        <!-- Pending Item 1 -->
+                        <div class="flex items-center justify-between p-4 border-b border-border-grid hover:bg-gray-50 transition-colors">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-50 p-2 border border-blue-100">
+                                    <span class="material-symbols-outlined text-primary">receipt_long</span>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <h3 class="font-bold text-text-main text-sm">AWS Invoice #9921</h3>
+                                        <span class="px-1.5 py-0.5 bg-yellow-100 text-yellow-800 text-[10px] font-bold uppercase border border-yellow-200">Awaiting 2nd Sig</span>
+                                    </div>
+                                    <div class="text-xs text-text-dim flex gap-3">
+                                        <span>Initiated by: <strong>Sarah (Dev Lead)</strong></span>
+                                        <span class="font-mono-nums">2 hrs ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <div class="text-right">
+                                    <div class="text-xs text-text-dim uppercase mb-0.5">Amount</div>
+                                    <div class="font-mono-nums font-bold text-text-main text-lg">$4,500.00</div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <button class="px-3 py-1.5 border border-danger text-danger bg-white hover:bg-red-50 text-xs font-bold uppercase tracking-wide">Reject</button>
+                                    <button class="px-3 py-1.5 bg-primary text-white border border-primary hover:bg-primary-hover text-xs font-bold uppercase tracking-wide shadow-sm flex items-center gap-1">
+                                        <span class="material-symbols-outlined text-[14px]">ink_pen</span>
+                                        Sign (1/2)
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pending Item 2 -->
+                        <div class="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-50 p-2 border border-blue-100">
+                                    <span class="material-symbols-outlined text-primary">person</span>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <h3 class="font-bold text-text-main text-sm">Contractor Payout: Design Q3</h3>
+                                        <span class="px-1.5 py-0.5 bg-blue-100 text-primary text-[10px] font-bold uppercase border border-blue-200">Awaiting 1st Sig</span>
+                                    </div>
+                                    <div class="text-xs text-text-dim flex gap-3">
+                                        <span>Initiated by: <strong>Auto-Foundry</strong></span>
+                                        <span class="font-mono-nums">15 mins ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <div class="text-right">
+                                    <div class="text-xs text-text-dim uppercase mb-0.5">Amount</div>
+                                    <div class="font-mono-nums font-bold text-text-main text-lg">$2,200.00</div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <button class="px-3 py-1.5 border border-danger text-danger bg-white hover:bg-red-50 text-xs font-bold uppercase tracking-wide">Reject</button>
+                                    <button class="px-3 py-1.5 bg-primary text-white border border-primary hover:bg-primary-hover text-xs font-bold uppercase tracking-wide shadow-sm flex items-center gap-1">
+                                        <span class="material-symbols-outlined text-[14px]">ink_pen</span>
+                                        Sign (1/2)
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Dense Ledger -->
+                <section class="flex flex-col gap-3 flex-1 min-h-0">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-sm font-bold text-text-dim uppercase tracking-widest flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[18px]">table_chart</span>
+                            Global Ledger
+                        </h2>
+                        <div class="flex gap-2">
+                            <div class="relative">
+                                <span class="absolute left-2 top-1.5 text-text-dim material-symbols-outlined text-[16px]">search</span>
+                                <input class="pl-8 pr-3 py-1 text-xs border border-border-grid bg-white focus:border-primary focus:ring-0 w-64" placeholder="Search TxID or Payee..." type="text"/>
+                            </div>
+                            <button class="px-3 py-1 bg-white border border-border-grid hover:bg-gray-50 text-xs font-bold text-text-main flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[14px]">filter_list</span> Filter
+                            </button>
+                            <button class="px-3 py-1 bg-white border border-border-grid hover:bg-gray-50 text-xs font-bold text-text-main flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[14px]">download</span> Export
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-bg-surface border border-border-grid shadow-sm flex-1 overflow-hidden flex flex-col">
+                        <!-- Table Header -->
+                        <div class="grid grid-cols-12 gap-4 px-4 py-2 bg-gray-50 border-b border-border-grid text-xs font-bold text-text-dim uppercase tracking-wide">
+                            <div class="col-span-1">Status</div>
+                            <div class="col-span-2">Time (UTC)</div>
+                            <div class="col-span-2">TxID</div>
+                            <div class="col-span-3">Payee / Source</div>
+                            <div class="col-span-2">Category</div>
+                            <div class="col-span-2 text-right">Amount</div>
+                        </div>
+                        <!-- Table Body -->
+                        <div class="overflow-y-auto flex-1">
+                            <!-- Row 1 -->
+                            <div class="grid grid-cols-12 gap-4 px-4 py-2 border-b border-border-grid hover:bg-blue-50 text-xs items-center group cursor-default">
+                                <div class="col-span-1 flex items-center gap-1 text-success font-bold">
+                                    <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                                    <span>CLR</span>
+                                </div>
+                                <div class="col-span-2 font-mono-nums text-text-dim">2023-10-24 14:32</div>
+                                <div class="col-span-2 font-mono-nums text-primary cursor-pointer hover:underline flex items-center gap-1" title="Copy TxID">
+                                    0x9f...a2b1
+                                </div>
+                                <div class="col-span-3 font-medium text-text-main">Stripe Deposit</div>
+                                <div class="col-span-2 text-text-dim">
+                                    <span class="px-1.5 py-0.5 bg-gray-100 text-text-dim border border-gray-200 text-[10px] uppercase">Revenue</span>
+                                </div>
+                                <div class="col-span-2 text-right font-mono-nums font-medium text-success">+ $12,500.00</div>
+                            </div>
+                            <!-- Row 2 -->
+                            <div class="grid grid-cols-12 gap-4 px-4 py-2 border-b border-border-grid hover:bg-blue-50 text-xs items-center group cursor-default">
+                                <div class="col-span-1 flex items-center gap-1 text-text-dim font-bold">
+                                    <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                                    <span>CLR</span>
+                                </div>
+                                <div class="col-span-2 font-mono-nums text-text-dim">2023-10-23 09:15</div>
+                                <div class="col-span-2 font-mono-nums text-primary cursor-pointer hover:underline flex items-center gap-1" title="Copy TxID">
+                                    0x3c...88d2
+                                </div>
+                                <div class="col-span-3 font-medium text-text-main">Vercel Inc.</div>
+                                <div class="col-span-2 text-text-dim">
+                                    <span class="px-1.5 py-0.5 bg-gray-100 text-text-dim border border-gray-200 text-[10px] uppercase">Infrastructure</span>
+                                </div>
+                                <div class="col-span-2 text-right font-mono-nums font-medium text-text-main">- $250.00</div>
+                            </div>
+                             <!-- Row 3 -->
+                            <div class="grid grid-cols-12 gap-4 px-4 py-2 border-b border-border-grid hover:bg-blue-50 text-xs items-center group cursor-default">
+                                <div class="col-span-1 flex items-center gap-1 text-text-dim font-bold">
+                                    <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                                    <span>CLR</span>
+                                </div>
+                                <div class="col-span-2 font-mono-nums text-text-dim">2023-10-22 18:45</div>
+                                <div class="col-span-2 font-mono-nums text-primary cursor-pointer hover:underline flex items-center gap-1" title="Copy TxID">
+                                    0x1a...f744
+                                </div>
+                                <div class="col-span-3 font-medium text-text-main">LegalZoom</div>
+                                <div class="col-span-2 text-text-dim">
+                                    <span class="px-1.5 py-0.5 bg-gray-100 text-text-dim border border-gray-200 text-[10px] uppercase">Admin</span>
+                                </div>
+                                <div class="col-span-2 text-right font-mono-nums font-medium text-text-main">- $499.00</div>
+                            </div>
+                             <!-- Row 4 -->
+                            <div class="grid grid-cols-12 gap-4 px-4 py-2 border-b border-border-grid hover:bg-blue-50 text-xs items-center group cursor-default">
+                                <div class="col-span-1 flex items-center gap-1 text-text-dim font-bold">
+                                    <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                                    <span>CLR</span>
+                                </div>
+                                <div class="col-span-2 font-mono-nums text-text-dim">2023-10-22 11:00</div>
+                                <div class="col-span-2 font-mono-nums text-primary cursor-pointer hover:underline flex items-center gap-1" title="Copy TxID">
+                                    0x7b...99e1
+                                </div>
+                                <div class="col-span-3 font-medium text-text-main">Upwork Escrow</div>
+                                <div class="col-span-2 text-text-dim">
+                                    <span class="px-1.5 py-0.5 bg-gray-100 text-text-dim border border-gray-200 text-[10px] uppercase">Talent</span>
+                                </div>
+                                <div class="col-span-2 text-right font-mono-nums font-medium text-text-main">- $1,200.00</div>
+                            </div>
+                             <!-- Row 5 -->
+                            <div class="grid grid-cols-12 gap-4 px-4 py-2 border-b border-border-grid hover:bg-blue-50 text-xs items-center group cursor-default">
+                                <div class="col-span-1 flex items-center gap-1 text-success font-bold">
+                                    <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                                    <span>CLR</span>
+                                </div>
+                                <div class="col-span-2 font-mono-nums text-text-dim">2023-10-21 16:20</div>
+                                <div class="col-span-2 font-mono-nums text-primary cursor-pointer hover:underline flex items-center gap-1" title="Copy TxID">
+                                    0x5d...22c9
+                                </div>
+                                <div class="col-span-3 font-medium text-text-main">Client: Acme Corp</div>
+                                <div class="col-span-2 text-text-dim">
+                                    <span class="px-1.5 py-0.5 bg-gray-100 text-text-dim border border-gray-200 text-[10px] uppercase">Revenue</span>
+                                </div>
+                                <div class="col-span-2 text-right font-mono-nums font-medium text-success">+ $8,400.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+</div>
