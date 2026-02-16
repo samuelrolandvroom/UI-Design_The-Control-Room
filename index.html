@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>The Control Room</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0056D2", // Trust Blue
+                        "primary-hover": "#0044A5",
+                        "primary-dark": "#0044A6",
+                        "background-light": "#F4F5F7", // Bureau Grey
+                        "background-dark": "#101722",
+                        "surface": "#FFFFFF",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1a2332",
+                        "border": "#D1D5DB", // Grid Grey
+                        "border-light": "#e5e7eb",
+                        "border-dark": "#2d3748",
+                        "border-color": "#D1D5DB",
+                        "border-grid": "#D1D5DB",
+                        "text-main": "#111827",
+                        "text-dim": "#6B7280",
+                        "danger": "#DC2626",
+                        "success": "#059669",
+                        "warning": "#F59E0B",
+                        "highlight": "#EFF6FF",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "system-ui", "sans-serif"],
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"],
+                    },
+                    borderRadius: {
+                        "none": "0px",
+                        "sm": "2px",
+                        "DEFAULT": "0px",
+                        "md": "4px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px",
+                    },
+                    spacing: {
+                        "18": "4.5rem",
+                    },
+                    boxShadow: {
+                        'sharp': '0 1px 1px rgba(0,0,0,0.05)',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        /* Custom scrollbar for tactical feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F4F5F7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D1D5DB;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9CA3AF;
+        }
+        
+        .tabular-nums {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Tactical inputs */
+        input[type="text"], input[type="email"], input[type="date"], select, input[type="number"] {
+            border-radius: 0;
+        }
+
+        .bg-grid-pattern {
+            background-image: linear-gradient(#E5E7EB 1px, transparent 1px), linear-gradient(to right, #E5E7EB 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .cursor-blink {
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        
+        .tactical-grid {
+            background-size: 40px 40px;
+            background-image:
+                linear-gradient(to right, #E5E7EB 1px, transparent 1px),
+                linear-gradient(to bottom, #E5E7EB 1px, transparent 1px);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "rxjs": "https://esm.sh/rxjs@^7.8.2?conditions=es2015",
+    "rxjs/operators": "https://esm.sh/rxjs@^7.8.2/operators?conditions=es2015",
+    "rxjs/ajax": "https://esm.sh/rxjs@^7.8.2/ajax?conditions=es2015",
+    "rxjs/webSocket": "https://esm.sh/rxjs@^7.8.2/webSocket?conditions=es2015",
+    "rxjs/testing": "https://esm.sh/rxjs@^7.8.2/testing?conditions=es2015",
+    "rxjs/fetch": "https://esm.sh/rxjs@^7.8.2/fetch?conditions=es2015",
+    "@angular/router": "https://esm.sh/@angular/router@^21.1.4?external=rxjs",
+    "@angular/common": "https://esm.sh/@angular/common@^21.1.4?external=rxjs",
+    "@angular/core": "https://esm.sh/@angular/core@^21.1.4?external=rxjs",
+    "@angular/compiler": "https://esm.sh/@angular/compiler@^21.1.4?external=rxjs",
+    "@angular/platform-browser": "https://esm.sh/@angular/platform-browser@^21.1.4?external=rxjs"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-background-light text-text-main h-screen overflow-hidden">
+    <app-root></app-root>
+</body>
+</html>
